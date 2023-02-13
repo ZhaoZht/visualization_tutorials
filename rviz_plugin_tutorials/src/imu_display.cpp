@@ -118,7 +118,7 @@ void ImuDisplay::processMessage( const sensor_msgs::Imu::ConstPtr& msg )
   // it fails, we can't do anything else so we return.
   Ogre::Quaternion orientation;
   Ogre::Vector3 position;
-  if( !context_->getFrameManager()->getTransform( msg->header.frame_id,
+  if( context_->getFrameManager()->getTransform( msg->header.frame_id,
                                                   msg->header.stamp,
                                                   position, orientation ))
   {
